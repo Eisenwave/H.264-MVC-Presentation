@@ -64,15 +64,6 @@ ol li:before {
 
 ul li:before {
     content: "\25FE";
-
-    /*content: url(img/unicode/ffed.png);
-    content: '';
-    background-image: url(img/unicode/ffed.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1em;
-    width: 1em;
-    display: inline-block;*/
 }
 
 section {
