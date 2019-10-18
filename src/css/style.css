@@ -96,9 +96,29 @@ video {
     image-rendering: pixelated;
 }
 
+.li-contents {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 185%;
+    margin: 0.5em 0;
+}
+
+.li-contents:before {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
 .centered {
     display: block;
     margin: 0 auto;
+}
+
+.box-shadow {
+    box-shadow: 2px 2px 4px 2px #3b3b3b;
+}
+
+.drop-shadow {
+    filter: drop-shadow(2px 2px 4px #3b3b3b);
 }
 
 .li-arrow:before {
@@ -142,6 +162,10 @@ video {
 
 .mono {
     font-family: "Noto Sans Mono", monospace;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 .red-gradient {

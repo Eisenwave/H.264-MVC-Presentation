@@ -21,24 +21,115 @@
 <body>
 
 <section style="margin-top: 0">
-    <h1 id="heading-top" data-type="slide-header">TOPIC</h1>
-
-    <style>
-        .no-margin {
-            margin: 0;
-        }
-    </style>
+    <h1 id="heading-top" data-type="slide-header">3D-VIDEO MIT H.264/MVC</h1>
 
     <div class="blu-gradient"
          style=" text-align: center; margin-top: 4em;  height: fit-content; padding: 3em 0 3em;
          font-family: 'Noto Sans', sans-serif;">
-        <h1 class="no-margin" style=" font-weight: 900; font-size: 200%">TOPIC</h1>
-        <h4 class="no-margin" style="margin: 0.5em 0 2em">Institute,<br>TU-Dresden</h4>
-        <p class="no-margin" style="font-size: 150%">Author</p>
-        <p class="no-margin" style="font-size: 100%"><span class="mono">1970-01-01</span></p>
+        <h1 class="no-margin" style=" font-weight: 900; font-size: 200%">3D-VIDEO MIT H.264/MVC</h1>
+        <h4 class="no-margin" style="margin: 0.5em 0 2em">Professur für Betriebssysteme,<br>TU-Dresden</h4>
+        <p class="no-margin" style="font-size: 150%">Jan Schultke</p>
+        <p class="no-margin" style="font-size: 100%"><span class="mono">2019-10-25</span></p>
     </div>
 </section>
 
+<section>
+    <h1 id="heading-contents" data-type="slide-header">Inhalt</h1>
+    <ol style="margin-left: 1.5em">
+        <li class="li-contents">Motivation</li>
+        <li class="li-contents">Physikalische Grundlagen</li>
+        <li class="li-contents">Begriffsklärungen - Video</li>
+        <li class="li-contents">3D-Video und H.264 - Grundlagen</li>
+        <li class="li-contents">Effiziente Kodierung von 3D-Videos</li>
+        <li class="li-contents">Effizienz und Rechenaufwand</li>
+        <li class="li-contents">Ausblick: 3D-Video in anderen Codecs</li>
+    </ol>
+</section>
+
+<section>
+    <h1 id="heading-trends" data-type="slide-header">Motivation</h1>
+    <img src="img/trends-3d.png" class="box-shadow" style="float: left; margin: 0 1em">
+    <ul>
+        <li>3D Hype ist inzwischen vorbei</li>
+        <li>dennoch sind 3D-Filme in Kinos weiterhin verbreitet</li>
+    </ul>
+
+</section>
+
+<section>
+    <h3 id="heading-monocular" data-type="slide-header">Tiefenwahrnehmung des Menschen</h3>
+    <div style="margin-left: 1em; font-size: 125%">
+        <p><u><b>Monokulare Faktoren:</b></u></p>
+        <ul>
+            <li class="no-margin" data-reveal="0"><b>Bewegungsparallaxe:</b> weiter = langsamer</li>
+            <li class="no-margin" data-reveal="1"><b>Optische Vergrößerung:</b> näher = größer</li>
+            <li class="no-margin" data-reveal="2"><b>Kinetischer Tiefeneffekt:</b> Details verfolgt</li>
+            <li class="no-margin" data-reveal="3"><b>Perspektive:</b> Details verfolgt</li>
+            <li class="no-margin" data-reveal="4"><b>Größe:</b> relativ/absolut/vertraut</li>
+            <li class="no-margin" data-reveal="5"><b>Luftperspektive:</b> weiter = farbärmer</li>
+            <li class="no-margin" data-reveal="6"><b>Verdeckung:</b> Näher bedeckt Weiter</li>
+            <li class="no-margin" data-reveal="7"><b>Texturengradient:</b> näher = detailreicher</li>
+            <li class="no-margin" data-reveal="8"><b>Licht und Schatten:</b> Wahrnehmung der Form</li>
+            <li class="no-margin" data-reveal="9"><b>Tiefenschärfe:</b> weiter/näher = verschwommen</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h3 id="heading-binocular" data-type="slide-header">Tiefenwahrnehmung des Menschen</h3>
+    <div style="margin-left: 1em; font-size: 125%">
+        <p><u><b>Binokulare Faktoren:</b></u></p>
+        <ul>
+            <li class="no-margin" data-reveal="0"><u><b>Parallaxe:</b></u>
+                <ul>
+                    <li>Mensch hat zwei Augen mit leichtem Abstand</li>
+                    <li>Umgebung wird aus zwei Perspektiven wahrgenommen</li>
+                    <li>Interpretation von Tiefe bis zu 10m durch Gehirn</li>
+                </ul>
+            </li>
+            <li class="no-margin" data-reveal="1"><b><u>Konvergenz:</u></b>
+                <ul>
+                    <li>Drehen der Augen nach Innen um nahe Objekte zu betrachten</li>
+                    <li>Durch Konvergenz der Blickachsen Tiefe bis zu 3m wahrnehmbar</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h3 id="heading-terms" data-type="slide-header">Begriffsklärungen zum Thema Video</h3>
+    <div style="margin-left: 1em; font-size: 125%">
+        <div style="margin-bottom: 2em">
+            <img src="img/logo-avc.png"
+                 class="box-shadow"
+                 style="float: right; width: 10em; height: auto; margin-right: 1em">
+            <p><u><b>Codec:</b></u></p>
+            <ul>
+                <li class=><b>co</b>der / <b>dec</b>oder</li>
+                <li class=>Algorithmenpaar zum Kodieren/Dekodieren von Datenströmen</li>
+                <li class=>z.B.
+                    <code>H.264/AVC</code>,
+                    <code>H.265/HEVC</code>,
+                    <code>Opus</code>,
+                    <code>AAC</code>,
+                    <code>AV1</code>,
+                    <code>VP8</code>
+                </li>
+            </ul>
+        </div>
+        <div data-reveal="1">
+            <img src="img/icon-mp4.png"
+                 class="drop-shadow"
+                 style="float: right; width: 6em; height: auto; margin-right: 1em">
+            <p><u><b>Containerformat:</b></u></p>
+            <ul>
+                <li class="no-margin">enthält kodierte Daten verschiedener Codecs</li>
+                <li class="no-margin">z.B. <code>.mp4</code>, <code>.mkv</code>, <code>.webm</code></li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 <!-------------------------------------------------- END OF CONTENT -------------------------------------------------->
 
