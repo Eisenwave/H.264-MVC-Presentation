@@ -131,6 +131,50 @@
     </div>
 </section>
 
+<section>
+    <h2 id="heading-h264" data-type="slide-header">H.264</h2>
+    <div style="margin-left: 1em; font-size: 125%">
+        <div style="margin-bottom: 1em">
+            <ul>
+                <li>auch AVC, MPEG-4 Part 10 genannt</li>
+                <li>der am weitesten verbreitete Codec der Welt</li>
+                <li>2003 durch VCEG, MPEG standartisiert</li>
+            </ul>
+        </div>
+        <div data-reveal="1">
+            <a href="img/h264-block-motion.png">
+                <img src="img/h264-block-motion.png" class="box-shadow"
+                     style="width: 400px; height: auto; float: left; margin-right: 1em">
+            </a>
+
+            <p><u><b>Kompression:</b></u></p>
+            <ul>
+                <li>erfolgt in Macroblöcken <br>(4x4 - 16x16)</li>
+                <li>Intra-Frame-Kompression (innerhalb eines Bildes)</li>
+                <li>Inter-Frame-Kompression (zwischen Bildern)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3 id="heading-h264-frames" data-type="slide-header">H.264 Framearten</h3>
+    <div style="margin-left: 1em; font-size: 125%">
+        <img src="img/frames.svg" class="centered" style="width: 900px; height: auto;">
+
+        <p><u><b>Framearten:</b></u></p>
+        <ul>
+            <li><b>I-frame:</b> intra-coded picture</li>
+            <li><b>P-frame:</b> predicted picture</li>
+            <li><b>B-frame:</b> bidirectional predicted picture</li>
+            <div data-reveal="1">
+                <li>Reihenfolge konfigurierbar</li>
+                <li>auch auf räumliche Ausschnitte (slices) anwendbar</li>
+            </div>
+        </ul>
+    </div>
+</section>
+
 <!-------------------------------------------------- END OF CONTENT -------------------------------------------------->
 
 <!-- SLIDE HEADER (gets pasted into all other slides) -->
