@@ -1,0 +1,76 @@
+@startuml
+rectangle "<math>I_0</math>" as a0
+rectangle "<math>B_1</math>" as a1
+rectangle "<math>B_2</math>" as a2
+rectangle "<math>B_3</math>" as a3
+rectangle "<math>B_4</math>" as a4
+
+rectangle "<math>B_5</math>" as a5
+rectangle "<math>B_6</math>" as a6
+rectangle "<math>B_7</math>" as a7
+rectangle "<math>I_1</math>" as a8
+
+a0 -right-> a4
+a4 <-right- a8
+
+a0 -right-> a2
+a2 <-right- a4
+
+a0 -right-> a1
+a1 <-right- a2
+
+a2 -right-> a3
+a3 <-right- a4
+
+a4 -right-> a6
+a6 <-right- a8
+
+a4 -right-> a5
+a5 <-right- a6
+
+a6 -right-> a7
+a7 <-right- a8
+
+rectangle "<math>I_0</math>" as b0
+rectangle "<math>B_1</math>" as b1
+rectangle "<math>B_2</math>" as b2
+rectangle "<math>B_3</math>" as b3
+rectangle "<math>B_4</math>" as b4
+
+rectangle "<math>B_5</math>" as b5
+rectangle "<math>B_6</math>" as b6
+rectangle "<math>B_7</math>" as b7
+rectangle "<math>B_8</math>" as b8
+
+
+
+a1 -down-> b1
+a2 -down-> b2
+a3 -down-> b3
+a4 -down-> b4
+a5 -down-> b5
+a6 -down-> b6
+a7 -down-> b7
+a8 -down-> b8
+
+b0 -right-> b4
+b4 <-right- b8
+
+b0 -right-> b2
+b2 <-right- b4
+
+b0 -right-> b1
+b1 <-right- b2
+
+b2 -right-> b3
+b3 <-right- b4
+
+b4 -right-> b6
+b6 <-right- b8
+
+b4 -right-> b5
+b5 <-right- b6
+
+b6 -right-> b7
+b7 <-right- b8
+@enduml

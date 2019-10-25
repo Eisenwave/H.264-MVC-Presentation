@@ -178,7 +178,7 @@
 </section>
 
 <section>
-    <h3 id="heading-anaglyph" data-type="slide-header">Multi-View-Coding: Anaglyph 3D</h3>
+    <h2 id="heading-anaglyph" data-type="slide-header">Anaglyph 3D</h2>
     <div style="margin-left: 1em; font-size: 125%">
         <a href="img/anaglyph-horse.jpg">
             <img src="img/anaglyph-horse.jpg"
@@ -244,7 +244,7 @@
 </section>
 
 <section>
-    <h3 id="heading-mvc-b-pictures" data-type="slide-header">Hierarchische B-Frames</h3>
+    <h2 id="heading-mvc-b-pictures" data-type="slide-header">Hierarchische B-Frames</h2>
     <img src="img/b-pictures.svg" class="centered" style="width: 680px; height: auto; margin-bottom: 2em"/>
     <img src="img/b-pictures-big.svg"
          class="centered" style="width: 900px; height: auto; margin-bottom: 2em"
@@ -257,7 +257,40 @@
 </section>
 
 <section>
-    <h3 id="heading-sources" data-type="slide-header">Quellen</h3>
+    <h2 id="heading-mvc-3d" data-type="slide-header">Vorherasgestruktur in 3D</h2>
+    <img src="img/b-pictures-3d.svg"
+         class="centered" style="width: 900px; height: auto; margin-bottom: 2em; margin-top: 5em"/>
+</section>
+
+<section>
+    <h2 id="heading-mvc-encoding-memory" data-type="slide-header">Effizientes Kodieren: Speicher</h2>
+    <img src="img/encoding-memory.png"
+         class="centered" style="width: 800px; height: auto;"/>
+</section>
+
+<section>
+    <h2 id="heading-mvc-encoding-result" data-type="slide-header">Effizientes Kodieren: Ergebnis</h2>
+    <img src="img/encoding-efficiency.png"
+         class="centered" style="width: 900px; height: auto;"/>
+</section>
+
+<section>
+    <h2 id="heading-mvc-encoding-practice" data-type="slide-header">Enkodieren in der Praxis</h2>
+    <div style="font-size: 125%">
+        <ul>
+            <li>H.265 unterstützt MVC ebenso</li>
+            <li>AV1 (AOMedia Video 1) nicht</li>
+            <li>x264/x265 unterstützen kein MVC</li>
+            <li>Enkodieren mit Frim (<a href="https://www.videohelp.com/software/FRIM">videohelp.com/software/FRIM</a>)</li>
+            <li>Kommandozeilenprogramm entwickelt in 2013</li>
+            <li>ffmpeg-Decoder ignorieren aber stereoskopische Informationen komplett und stellen nur ein Auge dar</li>
+        </ul>
+    </div>
+
+</section>
+
+<section>
+    <h2 id="heading-sources" data-type="slide-header">Quellen</h2>
     <ul>
         <li><a href="http://www.ramugedia.com/hierarchical-b-frames-or-b-pyramid">
             Hierarchical B-Frames: www.ramugedia.com</a>
@@ -279,7 +312,7 @@
 </section>
 
 <section>
-    <h3 id="heading-sources-img" data-type="slide-header">Bildquellen</h3>
+    <h2 id="heading-sources-img" data-type="slide-header">Bildquellen</h2>
     <ul>
         <li><a href="https://upload.wikimedia.org/wikipedia/commons/c/c0/Elephantsdream_vectorstill04_crop.png">
             h264-block-motion.png: Wikimedia</a>
