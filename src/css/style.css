@@ -70,7 +70,7 @@ section {
     max-height: 720px;
     min-height: 720px;
     border-bottom: #CC0000;
-    border-bottom-style: dashed;
+    border-bottom-style: none;
     margin-bottom: 125%;
     margin-top: 125%;
     background: white;

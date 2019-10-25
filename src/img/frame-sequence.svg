@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-35 -95 672 168">
+ <title>IBBPBB inter frame group of pictures</title>
+ <desc>Illustration of dependencies of the group of pictures scheme IBBPBB... by CMG Lee. Time goes from left to right.</desc>
+ <defs>
+  <path id="frame" d="M -30,-20 V 50 L 30,20 V -50 Z" stroke-width="1" stroke="#000000"/>
+  <g id="frame_i"><use xlink:href="#frame" fill="#00ff00"/><text x="0" y="0.7ex" fill="#000000">I</text></g>
+  <g id="frame_p"><use xlink:href="#frame" fill="#ff9999"/><text x="0" y="0.7ex" fill="#000000">P</text></g>
+  <g id="frame_b"><use xlink:href="#frame" fill="#66ccff"/><text x="0" y="0.7ex" fill="#000000">B</text></g>
+  <path id="arrow_1" d="M 0,0 a 20,20 0 0 0  -42,-2 l -2,-10 m 2,10 l 6,-8" stroke="#0066ff"/>
+  <path id="arrow_2" d="M 0,0 a 40,25 0 0 0  -92, 4 l -2,-10 m 2,10 l 6,-8" stroke="#0066ff"/>
+  <path id="arrow_3" d="M 0,0 a 70,45 0 0 0 -152, 0 l -2,-10 m 2,10 l 6,-8" stroke="#ff0000"/>
+  <g id="set">
+   <use xlink:href="#frame_i" transform="translate(  0,0)"/>
+   <use xlink:href="#frame_b" transform="translate( 50,0)"/>
+   <use xlink:href="#frame_b" transform="translate(100,0)"/>
+   <use xlink:href="#frame_p" transform="translate(150,0)"/>
+   <use xlink:href="#frame_b" transform="translate(200,0)"/>
+   <use xlink:href="#frame_b" transform="translate(250,0)"/>
+   <use xlink:href="#arrow_3" transform="translate(150,-40)"/>
+   <use xlink:href="#arrow_1" transform="translate( 50,-40) scale( 1, 1)"/>
+   <use xlink:href="#arrow_2" transform="translate( 50,-40) scale(-1, 1)"/>
+   <use xlink:href="#arrow_2" transform="translate(100, 40) scale( 1,-1)"/>
+   <use xlink:href="#arrow_1" transform="translate(100, 40) scale(-1,-1)"/>
+   <use xlink:href="#arrow_1" transform="translate(200,-40) scale( 1, 1)"/>
+   <use xlink:href="#arrow_2" transform="translate(200,-40) scale(-1, 1)"/>
+   <use xlink:href="#arrow_2" transform="translate(250, 40) scale( 1,-1)"/>
+   <use xlink:href="#arrow_1" transform="translate(250, 40) scale(-1,-1)"/>
+  </g>
+ </defs>
+ <circle cx="0" cy="0" r="99999" fill="#ffffff"/>
+ <g font-family="Helvetica,Arial,sans-serif" font-size="40" text-anchor="middle"
+    stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="none" fill="none">
+  <use xlink:href="#set"     transform="translate(  0,0)"/>
+  <use xlink:href="#set"     transform="translate(300,0)"/>
+  <use xlink:href="#frame_i" transform="translate(600,0)"/>
+  <path d="M 610,-75 h 20 l -10,-10 m 10,10 l -10,10" stroke="#000000" fill="none"/>
+  <text x="600" y="-75" dy="0.6ex" font-style="italic" fill="#000000">t</text>
+ </g>
+</svg>
