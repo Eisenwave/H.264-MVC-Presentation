@@ -159,8 +159,8 @@
 
 <section>
     <h3 id="heading-h264-frames" data-type="slide-header">H.264 Framearten</h3>
-    <div style="margin-left: 1em; font-size: 125%">
-        <img src="img/frames.svg" class="centered" style="width: 900px; height: auto;">
+    <div style="margin-left: 1em; font-size: 100%">
+        <img src="img/frames.svg" class="centered" style="width: 800px; height: auto;">
 
         <p><u><b>Framearten:</b></u></p>
         <ul>
@@ -172,11 +172,13 @@
                 <li>auch auf räumliche Ausschnitte (slices) anwendbar</li>
             </div>
         </ul>
+
+        <img src="img/frame-sequence.svg" class="centered" style="width: 500px; height: auto;" data-reveal="2">
     </div>
 </section>
 
 <section>
-    <h3 id="heading-mvc" data-type="slide-header">Multi-View-Coding: Anaglyph 3D</h3>
+    <h3 id="heading-anaglyph" data-type="slide-header">Multi-View-Coding: Anaglyph 3D</h3>
     <div style="margin-left: 1em; font-size: 125%">
         <a href="img/anaglyph-horse.jpg">
             <img src="img/anaglyph-horse.jpg"
@@ -191,9 +193,111 @@
         </ul>
         <ul style="margin-top: 2em" data-reveal="1">
             <li class="li-fat-plus">nur ein Videostream</li>
-            <li class="li-fat-minus">Verlust von Helligkeit,  Farbgenauigkeit</li>
+            <li class="li-fat-minus">Verlust von Helligkeit, Farbgenauigkeit</li>
         </ul>
     </div>
+</section>
+
+<section>
+    <h3 id="heading-mvc" data-type="slide-header">Multi-View-Coding: Mehrere Ansichten</h3>
+    <div style="margin-left: 1em; font-size: 124%">
+        <ul>
+            <li><b>Naive Implementierung: </b> H.264 Simulcast
+                <ul>
+                    <li>(normalerweise für Streams mit mehreren Auflösungen)</li>
+                </ul>
+            </li>
+            <li data-reveal="1"><b>Effizient: </b> Vorhersagestruktur aus P/B-Frames</li>
+        </ul>
+
+        <div data-reveal="2">
+            <img src="img/prediction.jpg"
+                 style="width: 380px; height: auto; float: left; margin-right: 1em">
+            <p>P/B-Frames haben 8 zeitliche/räumliche Nachbarn.</p>
+            <p>Welche davon sind die besten Prädiktoren?</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3 id="heading-mvc-stats" data-type="slide-header">Multi-View-Coding: Mehrere Ansichten</h3>
+    <div style="margin-left: 1em">
+        <p style="font-size: 125%"><u>Wahrscheinlichkeiten der besten Prädiktoren:</u></p>
+        <table>
+            <tr>
+                <td>
+                    <img src="img/predict-stats-0.jpg" style="width: 380px; height: auto; margin-right: 3em">
+                </td>
+                <td>
+                    <img src="img/predict-stats-1.jpg" style="width: 380px; height: auto;">
+                </td>
+            </tr>
+            <tr style="text-align: center">
+                <td>Videosequenz "Uli"</td>
+                <td>Videosequenz "Breakdancers"</td>
+            </tr>
+        </table>
+        <p style="margin-top: 2em; font-size: 125%" data-reveal="0">
+            <b>Schluss: </b>zeitliche Nachbarn sagen mehr aus
+        </p>
+    </div>
+</section>
+
+<section>
+    <h3 id="heading-mvc-b-pictures" data-type="slide-header">Hierarchische B-Frames</h3>
+    <img src="img/b-pictures.svg" class="centered" style="width: 680px; height: auto; margin-bottom: 2em"/>
+    <img src="img/b-pictures-big.svg"
+         class="centered" style="width: 900px; height: auto; margin-bottom: 2em"
+         data-reveal="1"/>
+    <ul data-reveal="2">
+        <li class="li-fat-plus">Hohe Kompressionseffizienz</li>
+        <li class="li-fat-minus">Großer Dekodierungspuffer notwendig</li>
+        <li class="li-fat-minus">Leistungsspitzen bei Dekodierung</li>
+    </ul>
+</section>
+
+<section>
+    <h3 id="heading-sources" data-type="slide-header">Quellen</h3>
+    <ul>
+        <li><a href="http://www.ramugedia.com/hierarchical-b-frames-or-b-pyramid">
+            Hierarchical B-Frames: www.ramugedia.com</a>
+        </li>
+        <li><a href="http://ip.hhi.de/imagecom_G1/assets/pdfs/h264_multi_view.pdf">
+            Efficient Compression of Multi-View Video Exploiting Inter-View ...
+        </a></li>
+        <li><a href="https://web.stanford.edu/~bgirod/pdfs/SettonVCIP2005.pdf">
+            Video streaming with SP and SI frames
+        </a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Video_compression_picture_types">
+            Video compression picture types: Wikipedia
+        </a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Depth_perception">Tiefenwahrnehmung: Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Anaglyph_3D">Anaglyph 3D: Wikipedia</a></li>
+    </ul>
+    <p style="margin: 2em; font-size: 125%"><a href="https://github.com/Eisenwave/H.264-MVC-Presentation">
+        Diese Präsentation: <br>https://github.com/Eisenwave/H.264-MVC-Presentation</a></p>
+</section>
+
+<section>
+    <h3 id="heading-sources-img" data-type="slide-header">Bildquellen</h3>
+    <ul>
+        <li><a href="https://upload.wikimedia.org/wikipedia/commons/c/c0/Elephantsdream_vectorstill04_crop.png">
+            h264-block-motion.png: Wikimedia</a>
+        </li>
+        <li><a href="https://media.dashcam-wiki.info/media/sites/2/2014/06/h.264-logo.png">
+            logo-avc.png: media.dashcam.wiki.info</a>
+        </li>
+        <li><a href="https://upload.wikimedia.org/wikipedia/commons/7/7b/IBBPBB_inter_frame_group_of_pictures.svg">
+            frame-sequence.png: Wikimedia
+        </a></li>
+        <li><a href="https://upload.wikimedia.org/wikipedia/commons/6/64/I_P_and_B_frames.svg">
+            frames.svg: Wikimedia</a>
+        </li>
+
+        <li><a href="http://plantuml.com/">SVG-Graphiken: PlantUML</a></li>
+        <li><a href="https://tu-dresden.de/">TU-Dresden Logo: modifiziertes SVG von tu-dresden.de</a></li>
+        <li><a href="https://trends.google.com/">trends-3d.png: Screenshot von Google Trends</a></li>
+    </ul>
 </section>
 
 <!-------------------------------------------------- END OF CONTENT -------------------------------------------------->

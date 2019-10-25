@@ -1,0 +1,15 @@
+@startuml
+rectangle "<math>I_0</math>" as i0
+rectangle "<math>B_0</math>" as b0
+rectangle "<math>B_1</math>" as b1
+rectangle "<math>B_2</math>" as b2
+rectangle "<math>I_1</math>" as i1
+
+
+i0 -right-> b1
+i0 -right-> b0
+b0 <-right- b1
+b1 -right-> b2
+b2 <-right- i1
+b1 <-right- i1
+@enduml

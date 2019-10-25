@@ -1,0 +1,13 @@
+@startuml
+rectangle "<math>T_{n-1}</math>" as t_neg
+rectangle "<math>P</math>" as p
+rectangle "<math>T_{n+1}</math>" as t_pos
+
+rectangle "<math>S_{n-1}</math>" as s_neg
+rectangle "<math>S_{n+1}</math>" as s_pos
+
+s_neg -down-> p
+t_neg -right-> p
+p <-right- t_pos
+p <-down- s_pos
+@enduml
