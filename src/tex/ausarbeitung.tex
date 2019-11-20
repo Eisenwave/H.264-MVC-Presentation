@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\graphicspath{ {../img/} }
+
+%\usepackage{hyperref}
+%\usepackage{titling}
+
+%\newcommand{\subtitle}[1]{
+%\posttitle{
+%\par\end{center}
+%\begin{center}\LARGE#1\end{center}
+%\vskip0.5em}
+%}
+
+\title{\textbf{\LARGE 3D-VIDEO MIT H.264/MVC
+\\{\Large Technische Universit\"at Dresden}
+\\\noindent\newline{\large Hauptseminar Betriebssysteme}
+\\{\small Professur f\"ur Betriebssysteme}
+}}
+%\subtitle{Pseudozuffalsfolgengeneratoren}
+
+%\title{\LARGE Pseudozuffalsfolgengeneratoren}
+\author{\\ \Large Jan Schultke}
+\date{\large2019-10-25}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\nouppercase{\leftmark}}
+\lhead{3D-VIDEO MIT H.264/MVC}
+%\rfoot{Page \thepage}
+\cfoot{\thepage}
+
+\setcounter{tocdepth}{3}
+%\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand\refname{8 Literaturverzeichnis}
+\renewcommand{\contentsname}{Inhaltsverzeichnis}
+%\parskip = \baselineskip
+
+\let\oldquote'
+\newif\ifquoteopen
+\catcode`\'=\active
+\makeatletter
+\DeclareRobustCommand*{'}{%
+\@ifnextchar'{%
+\ifquoteopen
+\global\quoteopenfalse\grqq\expandafter\@gobble
+\else
+\global\quoteopentrue\glqq\expandafter\@gobble
+\fi
+}{\oldquote}%
+}
+\makeatother
+
+\begin{document}
+
+    %\section{Title}\label{sec:title}
+    \maketitle
+    \pagenumbering{gobble}
+    \clearpage
+    \pagebreak
+
+    \pagenumbering{arabic}
+    \tableofcontents
+    \clearpage
+    \pagebreak
+
+    \section{Einleitung}\label{sec:intro}
+    \input{einleitung}
+
+    \section{Problem}\label{sec:problem}
+    \input{problem}
+
+    \pagebreak
+
+    \section{Related Work}\label{sec:relwork}
+    \input{related-work}
+
+    \pagebreak
+
+    \section{Grundlagen}\label{sec:basics}
+    \input{grundlagen}
+
+    \pagebreak
+
+    \section{Kernidee}\label{sec:idea}
+    \input{kernidee}
+
+    \pagebreak
+
+    \section{Implementierung}\label{sec:impl}
+    \input{implementierung}
+
+    \pagebreak
+
+    \section{Zusammenfassung}\label{sec:summary}
+    \input{zusammenfassung}
+
+    \pagebreak
+
+    \input{bibliography}
+
+\end{document}

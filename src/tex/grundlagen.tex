@@ -1,0 +1,64 @@
+\subsection{Tiefenwahrnehmung des Menschen}\label{subsec:depth-percept}
+Um zu verstehen, wie 3D-Medien kodiert werden können, ist es zunächst wichtig zu verstehen, wie die Tiefenwahrnehmung
+beim Menschen funktioniert.
+Wir unterscheiden zwischen \textit{monokularen} und \textit{binokularen} Faktoren.
+Monokulare Faktoren sind von nur einer Perspektive (Auge oder Kameralinse) abhängig.
+Dazu zählen unter anderem:
+\begin{itemize}
+    \item Bewegungsparallaxe
+    \item absolute/relative/vertraute Größe
+    \item Verdeckung naher Objekte durch ferne Objekte
+    \item Wahrnehmung dreidimensionaler Form durch Licht und Schatten
+    \item Tiefenschärfe
+\end{itemize}
+Diese Effekte sind allesamt in nur einem einzelnen Datenstrom enkodierbar und essentiell für ein immersives Bild.
+
+\noindent\newline Mehrere Datenströme werden hingegen für binokulare Faktoren benötigt.
+Hierzu zählt die Parallaxe zwischen dem linken und dem rechten Auge, sprich der Unterschied dieser zwei Perspektiven.
+Objekte die hierbei näher zum Betrachter liegen, werden unterschiedlicher von den Augen wahrgenommen, weiter entferntere
+Objekte hingegen ähnlicher.
+Dieser Faktor erlaubt eine \textit{echte} Tiefenwahrnehmung bis zu 10m.
+Weiterhin wird Tiefe durch die Konvergenz der Blickachsen des Betrachters wahrgenommen.
+Um besonders nahe gelegene Objekte zu betrachten, muss der Mensch seine Augen leicht nach innen drehen um das Objekt
+scharf zu sehen, was dem Gehirn wiederhin ermöglicht, Tiefe aus dieser Konvergenz zu interpretieren.
+
+\noindent\newline Da das Ändern der Blickachsen eines Zuschauers ohne Gewalt nicht möglich ist, bleibt somit die
+Parallaxe der entscheidende, zu reproduzierende Faktor um Videos mit 3D-Effekt zu erzeugen.
+\pagebreak
+
+
+\subsection{Begriffsklärungen zum Thema Video}\label{subsec:video-terms}
+\subsubsection{Codec}
+Der Begriff Codec setzt sich aus den englischen Wörtern \textbf{co}der (Kodierer) / \textbf{dec}oder (Dekodierer)
+zusammen und ist ein Algorithmenpaar bestehend aus den genannten Teilen.
+Er wird jedoch vor allem im Themenbereich Medien eingesetzt um Audio- und Videostandards wie \texttt{H.264} zu
+bezeichnen.
+
+\noindent\newline So ist z.B. \texttt{H.264/AVC} ein Codec, \texttt{MP4} hingegen ein Containerformat, sprich ein Dateiformat welches
+die kodierten Datenströme eines Codecs enthält.
+
+\noindent\newline Die Begriffe \textit{encoder} und \textit{decoder} hingegen werden für konkrete Programme zum Kodieren oder Dekodieren
+der Datenströme eines Codecs verwendet.
+So ist z.B. \textt{x264} ein \textit{encoder} für den Codec \texttt{H.264}
+
+\subsection{H.264}\label{subsec:h.264}
+H.264 ist ein Codec, welcher 2003 durch die VCEG (\textit{Video Coding Experts Group}) und MPEG
+(\textit{Moving Pictures Expert Group}) als \textit{MPEG Part 10} standardisiert wurde.
+Er wird auch als AVC (\textit{Advanced Video Codec}) bezeichnet.
+
+\noindent\newline H.264 unterstützt sowohl \textit{Intra-Frame-Kompression}, die Kompression von Daten innerhalb eines Rahmens sowie
+\textit{Inter-Frame-Kompression}, die Kompression zwischen mehreren Rahmen.
+
+\noindent\newline\includegraphics[width=\textwidth]{../img/frames}
+
+\noindent\newline Kompression von Videodaten erfolgt in sogenannten \textit{Macroblöcken}.
+Hierbei handelt is sich um 4x4 bis 16x16 große Blöcke von Pixeln.
+
+%\paragraph{Outline}
+%\section*{8 Literaturverzeichnis}\label{sec:bibliography}
+%Section~\ref{sec:previous work} gives account of previous work.
+%Our new and exciting results are described in Section~\ref{sec:results}.
+%Finally, Section~\ref{sec:conclusions} gives the conclusions.
+%    \section{Previous work}\label{sec:previous work}
+%    A much longer \LaTeXe{} example was written by Gil~\cite{Gil:02}.
+

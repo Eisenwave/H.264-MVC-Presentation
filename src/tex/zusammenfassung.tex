@@ -1,0 +1,20 @@
+\noindent\newline Das Kodieren von meherer Perspektiven (\textit{Multi-View-Coding}) und deren separates Darstellen ist
+eine popul\"are Methode um den visuellen Effekt eines dredimensionalen Videos zu erzeugen.
+Jedoch bringt dieses auch einzigartige Herausforderungen mit sich, da unsere Videosequenz um eine Raumachse erweitert
+wird.
+
+\noindent\newline Unter Nutzung von hierarchischen B-Rahmen-Baumstrukturen k\"onnen wir erfolgreich Multi-View-Coding
+f\"ur \texttt{H.264} implementieren.
+Unsere Implementierung ist sowohl f\"ur mehrere Perspektiven skalierbar als auch effizient im Speicher
+anordenbar. Zwar existieren Ausnahmef\"alle, jedoch sehen wir konsistente Reduktion in der Datenmenge im Vergleich
+zu Simulcast.
+
+\noindent\newline Die Flexibilit\"at des \texttt{H.264}-Codecs erlaubt es uns solche Baumstrukturen standardkonform
+zu kodieren.
+Bedauernswerterweise existiert außer \texttt{FRIM} keine Implementierung von \texttt{MVC}, insbesondere \texttt{ffmpeg}
+unterstützt dies nicht.
+
+
+
+
+
