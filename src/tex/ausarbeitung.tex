@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 
-\graphicspath{ {../img/} }
+\graphicspath{ ../img/ }
 
 %\usepackage{hyperref}
 %\usepackage{titling}
@@ -27,7 +27,7 @@
 
 %\title{\LARGE Pseudozuffalsfolgengeneratoren}
 \author{\\ \Large Jan Schultke}
-\date{\large2019-10-25}
+\date{\large2019-11-22}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -38,7 +38,7 @@
 
 \setcounter{tocdepth}{3}
 %\renewcommand{\footrulewidth}{0.5pt}
-\renewcommand\refname{8 Literaturverzeichnis}
+\renewcommand\refname{9 Literaturverzeichnis}
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 %\parskip = \baselineskip
 
@@ -57,6 +57,8 @@
 }
 \makeatother
 
+\renewcommand{\figurename}{Abbildung }
+
 \begin{document}
 
     %\section{Title}\label{sec:title}
@@ -72,6 +74,8 @@
 
     \section{Einleitung}\label{sec:intro}
     \input{einleitung}
+
+    \pagebreak
 
     \section{Problem}\label{sec:problem}
     \input{problem}
@@ -93,8 +97,13 @@
 
     \pagebreak
 
-    \section{Implementierung}\label{sec:impl}
+    \section{Details eines Aspekts / Implementierung}\label{sec:impl}
     \input{implementierung}
+
+    \pagebreak
+
+    \section{Bewertung}\label{sec:eval}
+    \input{bewertung}
 
     \pagebreak
 
@@ -103,6 +112,7 @@
 
     \pagebreak
 
+    \addcontentsline{toc}{section}{\numberline{9} Literaturverzeichnis}
     \input{bibliography}
 
 \end{document}

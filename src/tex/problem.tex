@@ -1,13 +1,12 @@
 Das parallele Kodieren von zwei oder mehreren Ansichten bringt zweierlei Herausforderungen mit sich:
 \begin{itemize}
-    \item Komprimieren des Datenstroms durch Ausnutzen von Redundanz zwischen ähnlichen Perspektiven
+    \item Komprimieren des Datenstroms durch Ausnutzen von Redundanz zwischen \"ahnlichen Perspektiven
     \item Multiplexing der Rahmen unterschiedlicher Perspektiven in einen einzigen, kontinuierlichen Datenstrom
 \end{itemize}
 
-\noindent Mit \texttt{H.264} lassen sich diese Herausforderungen \textbf{naiv} mithilfe von \textit{Simulcast}
-bew\"altigen.
+\noindent Mit \texttt{H.264} l\"asst sich zumindest der zweite Punkt \textbf{naiv} mithilfe von \textit{Simulcast}\cite{
+simulcast} bew\"altigen.
 Hierbei werden mehrere Ansichten unabh\"angig voneinander kodiert und dekodiert.
-
-\noindent\\ Abh\"angigkeiten zwischen den Ansichten existieren nicht, der Aufpreis pro Perspektive ist somit im
+Redundanzen zwischen den Perspektiven bleiben unausgenutzt, der Aufpreis pro Perspektive ist somit im
 Durchschnitt 100\%.
 Unser Kompressionsverfahren muss von daher einen geringeren Aufpreis haben um seine Anwendung zu rechtfertigen.

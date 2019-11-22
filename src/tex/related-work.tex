@@ -1,0 +1,23 @@
+Die Implementierung von effizienter \texttt{MVC}-Kodierung basiert gr\"o{\ss}tenteils auf
+\textit{Efficient Compression of Multi-View Video Exploiting Inter-View Dependencies Based on \texttt{H.264/MPEG4-AVC}}
+von P. Merkle, K. M\"uller, A. Smolic, und T. Wiegand\cite{paper}.
+Dabei handelt es sich um eines von mehreren Papieren, welches noch vor der Standardisierung 2009\cite{mvc} von
+\texttt{MVC} in \texttt{H.264} als Vorschlag f\"ur eine solche Kodierung ver\"offentlich wurde.
+
+\noindent\\ Der H.264-Standard selbst\cite{h264}, welcher in der aktuellen Ausgabe kostenpflichtig verf\"ugbar ist, beschreibt
+lediglich die allgemeine Struktur des \texttt{H.264}-Datenformats.
+Dazu z\"ahlen die Arten und Abfolgen von Rahmen, die Gr\"o{\ss}e von Macrobl\"ocken, Header-Information am Anfang eines
+Rahmens und vieles mehr.
+Die konkrete Abfolge von Rahmen, wie z.B. die oft verwendete \texttt{IBBPBBIBBPBBI}-Abfolge\cite{frame-order} steht
+hingegen dem Encoder frei zur Wahl.
+
+\noindent\\ Am 29.10.2019 wurde \texttt{FRIM 1.00}\cite{frim} ver\"offentlicht.
+Hierbei handelt es sich um einen Encoder und Decoder f\"ur \texttt{H.264} mit \texttt{MVC}, welcher f\"ur
+Microsoft Windows (x86/x86\_64) verf\"ugbar ist.
+Zum Experimentieren mit 3D-Videos ist dieser ein sehr geeignetes und vor allem kostenloses Werkzeug.
+
+\noindent\\ \texttt{MVC} wird bedauernswerterweise nicht vom popul\"aren Kommandozeilenprogramm \texttt{ffmpeg}\cite{
+ffmpeg}
+unterst\"utzt.
+So werden zus\"atzliche Ansichten beim Dekodieren schlichtweg ignoriert.
+

@@ -4,7 +4,7 @@
     \includegraphics[width=0.75\textwidth]{../img/b-pictures}
 \end{center}
 
-Um mehrere Ansichten zu Kodieren, verwenden wir hierarchische Baumstrukturen von B-Rahmen.
+\noindent Um mehrere Ansichten zu Kodieren, verwenden wir hierarchische Baumstrukturen\cite{hier-b-frames} von B-Rahmen.
 Wie im Bild zu sehen, werden hier zun\"achst B-Rahmen aus Paaren von I-Rahmen erzeugt und daraus weitere B-Rahmen, usw.
 
 
@@ -12,11 +12,11 @@ Wie im Bild zu sehen, werden hier zun\"achst B-Rahmen aus Paaren von I-Rahmen er
 \begin{center}
     \includegraphics[width=1\textwidth]{../img/b-pictures-3d}
 \end{center}
-Aus diesen Ergebnissen k\"onnen wir schlussfolgern, dass unsere Kodierungsstruktur sowohl r\"aumliche als auch zeitliche
-Nachbarn zum Produzieren eines B-Rahmens verwenden sollte.
-Es ist zu sehen, dass B-Rahmen der Nachbaransicht hier identisch zur ersten Ansicht erzeugt werden, allerdings
-zus\"atzlich die erste Ansicht zum Erzeugen von B-Rahmen eingebunden wird.
+Aus unseren Ergebnissen\ref{sec:idea} k\"onnen wir schlussfolgern, dass unsere Kodierungsstruktur sowohl r\"aumliche als
+auch zeitliche Nachbarn zum Produzieren eines B-Rahmens verwenden sollte.
+Es ist zu sehen, dass B-Rahmen der Nachbaransicht hier parallel und identisch zur ersten Ansicht erzeugt werden.
+Allerdings wird in der Zweiten zus\"atzlich die erste Ansicht zum Erzeugen von B-Rahmen eingebunden.
 
-\noindent\newline \texttt{H.264} erlaubt es uns sogar f\"ur einzelne Macrobl\"ocke die Rahmen zu definieren, as welchen sie
-erzeugt werden.
+\noindent\newline \texttt{H.264} erlaubt es uns sogar f\"ur einzelne Macrobl\"ocke die Rahmen zu definieren\cite{h264},
+aus welchen sie erzeugt werden.
 Somit bleiben wir flexibel und k\"onnen entscheiden, ob wir r\"aumliche oder zeitliche Nachbarn einbinden.
