@@ -1,12 +1,24 @@
-Das parallele Kodieren von zwei oder mehreren Ansichten bringt zweierlei Herausforderungen mit sich:
+Das parallele Kodieren von zwei oder mehreren Ansichten bringt dreierlei Herausforderungen mit sich:
 \begin{itemize}
+    \item zeitliches Synchronisieren aller Videosequenzen
     \item Komprimieren des Datenstroms durch Ausnutzen von Redundanz zwischen \"ahnlichen Perspektiven
-    \item Multiplexing der Rahmen unterschiedlicher Perspektiven in einen einzigen, kontinuierlichen Datenstrom
+    \item Multiplexen der Rahmen unterschiedlicher Perspektiven in einen einzigen, kontinuierlichen Datenstrom
 \end{itemize}
 
-\noindent Mit \texttt{H.264} l\"asst sich zumindest der zweite Punkt \textbf{naiv} mithilfe von \textit{Simulcast}\cite{
-simulcast} bew\"altigen.
+\noindent Das zeitliche Synchronisieren ist deshalb notwendig, da dreidimensionale Videosequenzen durch mehrere Kameras
+gleichzeitig gefilmt werden, deren aufgenommene Bilder zeitlich versetzt sein k\"onnen.
+Dies erfolgt in \textit{Rahmen}, welche den absoluten Bildinhalt zu einem bestimmten Zeitpunkt enthalten.
+(oder die \"Anderung dessen, relativ  zu anderen Rahmen, siehe~[\texttt{\nameref{subsec:h.264}}])
+
+\noindent\\ In den nachfolgenden Kapiteln gehen wir vereinfacht davon aus, das alle Rahmen bereits zeitlich synchron und in
+identischer Frequenz vorliegen.
+Dies ist in der Praxis auch der Fall, solange nur eine Kamera filmt, welche durch mehrere Linsen aufnimmt.
+
+\noindent\\ Die nachfolgenden Punkte lassen sich f\"ur \texttt{H.264} \textbf{naiv} mithilfe von
+\textit{Simulcast}~\cite{simulcast} bew\"altigen.
 Hierbei werden mehrere Ansichten unabh\"angig voneinander kodiert und dekodiert.
-Redundanzen zwischen den Perspektiven bleiben unausgenutzt, der Aufpreis pro Perspektive ist somit im
-Durchschnitt 100\%.
-Unser Kompressionsverfahren muss von daher einen geringeren Aufpreis haben um seine Anwendung zu rechtfertigen.
+Redundanzen zwischen den Perspektiven bleiben unausgenutzt, der Aufpreis pro Perspektive ist somit im Durchschnitt
+$100\%$, relativ zur einfachen Sequenz oder $\frac{1}{Anzahl(Perspektiven) - 1}$ relativ zu Allen bereits vorhandenen.
+
+\noindent\\ Unser Kompressionsverfahren muss von daher einen geringeren Aufpreis haben um seine Anwendung zu
+rechtfertigen.

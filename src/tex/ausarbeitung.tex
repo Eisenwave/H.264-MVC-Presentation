@@ -42,21 +42,6 @@
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 %\parskip = \baselineskip
 
-\let\oldquote'
-\newif\ifquoteopen
-\catcode`\'=\active
-\makeatletter
-\DeclareRobustCommand*{'}{%
-\@ifnextchar'{%
-\ifquoteopen
-\global\quoteopenfalse\grqq\expandafter\@gobble
-\else
-\global\quoteopentrue\glqq\expandafter\@gobble
-\fi
-}{\oldquote}%
-}
-\makeatother
-
 \renewcommand{\figurename}{Abbildung }
 
 \begin{document}
